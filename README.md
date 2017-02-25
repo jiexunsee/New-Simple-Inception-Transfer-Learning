@@ -29,4 +29,4 @@ This will train a single layer neural network on the bottleneck files. The train
 ## Notes
 Only 1000 images of cats and 1000 images of dogs are in the train folder. I did not use all the images as that would take quite a lot of time to produce bottleneck files for. 1000 images of each category are more than enough to produce a very high accuracy.
 
-The code for downloading the inception model and producing the bottleneck text files was taken from [TensorFlow for Poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/index.html?index=..%2F..%2Findex#0) by Pete Warden. However, I only took the relevant portions, hence making the code much shorter and easier to understand.
+The code for downloading the inception model and producing the bottleneck text files was taken from the TensorFlow github -> examples -> image_retraining. However, I only took the relevant portions, hence making the code much shorter and easier to understand.
