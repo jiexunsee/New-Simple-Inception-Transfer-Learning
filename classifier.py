@@ -92,7 +92,7 @@ with tf.Session() as sess:
 	init = tf.global_variables_initializer()
 	sess.run(init)
 	train_writer = tf.summary.FileWriter('log', sess.graph)
-	tf.train.write_graph(sess.graph_def, '', 'savedgraph.pbtxt', as_text=False)
+	tf.train.write_graph(sess.graph_def, './model', 'savedgraph.pbtxt', as_text=False)
 
 	# Running the training in batches 
 	batch_count = int(math.ceil(len(train_inputs)/batch_size))
@@ -118,6 +118,6 @@ with tf.Session() as sess:
 	print ("TEST LOSS: {}, TEST ACCURACY: {}".format(test_loss, test_accuracy))
 
 	g = tf.get_default_graph()
-	saver.save(sess, 'savedgraph')
+	saver.save(sess, './model/savedmodel')
 
 	print (prediction.name)
